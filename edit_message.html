@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改留言</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>修改留言</h2>
+        <form method="POST" action="edit_message.php?id=<?php echo $message_id; ?>">
+            <label for="new_message">新留言:</label>
+            <textarea id="new_message" name="new_message" required><?php echo $message; ?></textarea>
+            <button type="submit">修改</button>
+        </form>
+        <a href="messages.php">返回留言板</a>
+    </div>
+</body>
+</html>
